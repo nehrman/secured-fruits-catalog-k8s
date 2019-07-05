@@ -24,8 +24,6 @@
   <properties>
     <arquillian.version>1.4.0.Final</arquillian.version>
     <awaitility.version>3.1.0</awaitility.version>
-    <openjdk18-openshift.version>1.4</openjdk18-openshift.version>
-    <openshift-client.version>3.1.8</openshift-client.version>
     <rest-assured.version>3.1.0</rest-assured.version>
     <keycloak.version>6.0.1</keycloak.version>
 
@@ -33,10 +31,9 @@
     <fabric8.generator.from>registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift:${openjdk18-openshift.version}</fabric8.generator.from>
     <fabric8.generator.from>registry.redhat.io/redhat-openjdk18-openshift:${openjdk18-openshift.version}</fabric8.generator.from>
     <fabric8.generator.fromMode>docker</fabric8.generator.fromMode>
-    -->
     <fabric8.generator.from>openshift/redhat-openjdk18-openshift:${openjdk18-openshift.version}</fabric8.generator.from>
     <fabric8.generator.fromMode>istag</fabric8.generator.fromMode>
-    
+    -->
     <java.version>1.8</java.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
@@ -219,7 +216,7 @@
   </build>
   <profiles>
     <profile>
-      <id>openshift</id>
+      <id>kubernetes</id>
       <build>
         <plugins>
           <plugin>
@@ -310,7 +307,7 @@
       <activation />
     </profile>
     <profile>
-      <id>openshift-it</id>
+      <id>kubernetes-it</id>
       <build>
         <plugins>
           <plugin>
