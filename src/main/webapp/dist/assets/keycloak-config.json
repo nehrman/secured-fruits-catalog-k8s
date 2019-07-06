@@ -1,0 +1,7 @@
+{
+  "realm": "fruits-catalog",
+  "resource": "fruits-catalog-app-js",
+  "auth-server-url": "https://keycloak.testlab.local/auth",
+  "ssl-required": "external",
+  "public-client": true
+}

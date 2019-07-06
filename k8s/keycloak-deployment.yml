@@ -201,9 +201,9 @@ spec:
           value: root
         - name: DB_ADDR
           value: keycloak-postgresql
-        - name: OPENSHIFT_KUBE_PING_LABELS
+        - name: KUEBRNETES_LABELS
           value: deploymentconfig=keycloak
-        - name: OPENSHIFT_KUBE_PING_NAMESPACE
+        - name: KUBERNETES_NAMESPACE
           valueFrom:
             fieldRef:
               fieldPath: metadata.namespace
